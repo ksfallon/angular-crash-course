@@ -1,0 +1,32 @@
+Angular notes Continued:
+
+When you create a Component you'll generally have 4 files for it:
+  - The typescript (ts) file - the main Class file that contains any properties and methods
+      - it also specifies things like your: templateUrl, styleUrl(css file)
+  - Your template which is your html file:
+  - Your CSS file - can have specific ones for components
+  - Spec file for test - look up another video for this
+
+app.component.ts - importing components - this is the structure for ever component we make
+  @Component is an object that contains three parameters:
+    1st - selector - is the tag, or the html tag that you will use to imbed your component
+      - since this one is the app-root component its being embedded in the intex.html at <app-root></app-root> (line 11)
+      -** the ones we create we will embedd in the app.component.html
+    2nd - templateUrl - is the html file where the tags are being embedded
+    3rd - styleUrls - (can have more than 1) - is where you do the styling for this specific html (app.component.html)
+
+  Outside of the component object we have our class:
+  export class AppComponent {
+    title = 'angularCrashCourse';
+  }
+    - this is where we put the title AND methods
+      - custom methods, lifecycle methods - similar to React class based components
+
+    *Lets make it TypeScript compatible - so in our class for title we will declare it a string, if we did number we'd get an error:
+    title: string = 'angularCrashCourse';
+      - title is a parameter, so we can give the key (title) and get the value ('angularCrashCourse')!
+      - Now lets display it in our title:
+        - Change <h1> hello world </h1> in app.component.html to:
+        - <h1>{{title}}</h1>
+        - Now lets change title to equal 'Task Tracker' and see how it changes on the web page
+
