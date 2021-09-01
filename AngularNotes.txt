@@ -29,4 +29,5 @@ app.component.ts - importing components - this is the structure for ever compone
         - Change <h1> hello world </h1> in app.component.html to:
         - <h1>{{title}}</h1>
         - Now lets change title to equal 'Task Tracker' and see how it changes on the web page
-
+        ** SIMILAR TO REACT - the curly brackets give us the ability to write JS in our HTML file **
+          - so can do math ({{5+6}}), can do JS methods ({{title.toUpperCase()}}) will make the string all upper case.
